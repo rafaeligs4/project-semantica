@@ -1,0 +1,40 @@
+<div class="dropdown" [class.open]="isOpen">
+  <!-- Botón desencadenador -->
+  <button 
+    type="button"
+    (click)="toggleMenu()"
+    (keydown.enter)="toggleMenu()"
+    (keydown.space)="toggleMenu(); $event.preventDefault()"
+    [attr.aria-expanded]="isOpen ? 'true' : 'false'"
+    aria-haspopup="true"
+    aria-controls="dropdown-menu"
+    aria-label="Menú de usuario"
+    #triggerButton
+  >
+    {{ selectedOption || 'Opciones' }}
+    <span aria-hidden="true">▼</span>
+  </button>
+
+  <!-- Menú desplegable -->
+  <ul 
+    id="dropdown-menu"
+    role="menu"
+    *ngIf="isOpen"
+    (keydown.escape)="isOpen = false"
+  >
+    <li 
+      *ngFor="let option of options" 
+      role="none"
+    >
+      <button
+        role="menuitem"
+        tabindex="-1"
+        (click)="selectOption(option)"
+        (keydown.enter)="selectOption(option)"
+        (keydown.space)="selectOption(option); $event.preventDefault()"
+      >
+        {{ option }}
+      </button>
+    </li>
+  </ul>
+</div>

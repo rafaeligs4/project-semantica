@@ -1,0 +1,26 @@
+<!-- Otra informacion importante a tomar en cuenta es que se debe utilizar ARIA para mejorar la interfaz del HTML
+Esto es algo nuevo que debo investigar para mejorar mi semántica HTML 
+-->
+
+<div  aria-label="Card" class="card" style="border:1px solid #ddd; padding:15px; max-width:200px">
+  
+    <!-- Para la imagen, existe un error importante que es el de las imagenes que no pueden estar sin texto 
+     alternativo ya que esto permite mostrar informacion en caso de que no cargue dicha imagen 
+    -->
+  
+    <!-- <img  src="https://via.placeholder.com/150" style="width:100%"> -->
+  <img alt="imagen_producto"  src="https://via.placeholder.com/150" style="width:100%">
+
+  <div style="font-size:1.2rem; margin:10px 0">Producto Ejemplo</div>
+  <div style="color:green; font-weight:bold">$99.99</div>
+  <!-- Button -->
+   <!-- Este componente de tipo button contiene un error importante segun WAVE
+    de tipo AAA para el contraste, el contraste debe cumplir unos requisitos importantes
+    relacionados al color
+   -->
+
+   <!-- button style="background:#007bff; color:white; border:none; padding:8px 15px; margin-top:10px"> -->
+  <button role="button" style="background:#007bff; color: black ; font-weight: bolder; border:none; padding:8px 15px; margin-top:10px">
+    <span class="fa fa-cart-plus"></span> Comprar
+  </button>
+</div>

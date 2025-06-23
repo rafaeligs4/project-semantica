@@ -1,59 +1,22 @@
-# ProjectSemantica
+## PROYECTO NUEVO 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+Este proyecto consistir  en una ayuda para mejorar la sem ntica de html dentro de un objeto.
+ * Por ahora voy a empezar con un componente generado por la IA para analizar los puntos que debo cambiar.
+ * Utilizar  una herramienta llamada WAVE que me ayudar  a indicar los errores que tenga respecto a la sem ntica.
 
-## Development server
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## EJERCICIO PRÁCTICO PARA MEJORAR LA SEMÁNTICA EN HTML
 
-## Code scaffolding
+Crear un componente Angular que muestre una lista de artículos de blog, mejorando su accesibilidad mediante:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Uso correcto de etiquetas semánticas HTML5
 
-```bash
-ng generate component component-name
-```
+* Implementación de atributos ARIA necesarios
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Corrección de errores detectados por WAVE
 
-```bash
-ng generate --help
-```
+El componente se llama list-card-component
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ingresaré una copia donde colocaré el ejercicio sin ressolver y el que se va a visualizar será el que tiene ajustes

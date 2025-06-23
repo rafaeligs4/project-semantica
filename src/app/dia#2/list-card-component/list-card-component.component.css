@@ -1,0 +1,85 @@
+/* blog-list.component.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px;
+}
+
+.search-button {
+  padding: 8px 15px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.post {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  padding: 15px;
+  display: flex;
+}
+
+.image img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+h2 {
+  color: #0066cc;
+  cursor: pointer;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.read-more {
+  /* El color de la letra debe ser cambiado por uno que este bien en el contexto del contraste */
+  /* color: #009900; */
+  color: #006400;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.page {
+  padding: 8px 15px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.related {
+  background: #eef7ff;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
