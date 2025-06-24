@@ -25,8 +25,8 @@ Crear un componente Angular que muestre una lista de artículos de blog, mejoran
     correctos 
     -->
     <div role="search" class="search">
-      <label for="searcher" > Buscar artículos</label>
-      <input aria-label="searcher" name="searcher" type="text">
+      <label for="searcher" aria-label="buscador" > Buscar artículos</label>
+      <input id="searcher"  type="text">
       <!-- El div debe ser un button -->
       <button role="button"  type="submit"  class="search-button">Buscar</button>
   
