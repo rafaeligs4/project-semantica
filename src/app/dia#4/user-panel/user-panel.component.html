@@ -1,0 +1,76 @@
+<!-- user-panel.component.html -->
+<!-- Voy a cambiar este div por un Main -->
+<main aria-label="Panel de usuario" class="user-dashboard">
+    <!-- Voy a cambiar este div por un header -->
+  <header aria-label="Información del usuario"  class="user-header">
+    <!-- A esta img le agregare un alt -->
+    <img aria-label="imagen de perfil" src="{{ user.avatar }}" class="avatar" alt="Avatar">
+    <div class="user-info">
+      <h1>{{ user.name }}</h1>
+      <p>Miembro desde: {{ user.joinDate }}</p>
+    </div>
+  </header>
+<!-- Voy a cambiar este div por un section -->
+  <section aria-labelledby="section-stats"  class="stats">
+    <h2 id="section-stats">Estadisticas</h2>
+    <!-- Cambiaré los siguientes 3 divs por article -->
+    <article  class="stat-card"> 
+        <!-- Cambiare los siguientes 2 vid por etiquetas de texto (span) -->
+      <span class="stat-value">{{ stats.posts }}</span>
+      <span class="stat-label">Publicaciones</span>
+    </article>
+    <article  class="stat-card">
+        <!-- Cambiare los siguientes 2 vid por etiquetas de texto (span) -->
+      <span class="stat-value">{{ stats.followers }}</span>
+      <span class="stat-label">Seguidores</span>
+    </article>
+    <article  class="stat-card">
+        <!-- Cambiare los siguientes 2 vid por etiquetas de texto (span) -->
+      <span class="stat-value">{{ stats.following }}</span>
+      <span class="stat-label">Siguiendo</span>
+    </article>
+  </section>
+<!-- Voy a cambiar este div por un nav -->
+  <nav aria-label="Seccion de acciones" class="user-actions">
+    <!-- Cambiaré los siguientes 3 divs por button -->
+    <button class="action-btn" (click)="editProfile()">Editar Perfil</button>
+    <button  class="action-btn" (click)="changePassword()">Cambiar Contraseña</button>
+    <button  class="action-btn" (click)="logout()">Cerrar Sesión</button>
+  </nav>
+  <!-- Voy a cambiar este div por un section -->
+  <section aria-labelledby="section-activity" class="recent-activity">
+    <h2 id="section-activity">Actividad Reciente</h2>
+    <!--  Voy a cambiar este div por un ul y li para iterar mejores las listas -->
+    <ul>
+        <li  class="activity-item" *ngFor="let item of activity">
+        <!-- Voy a cambiar este div por un i  -->
+        <i class="activity-icon">📝</i>
+        <div class="activity-content">
+            <p>{{ item.description }}</p>
+            <!-- Voy a cambiar este div por un span -->
+            <span class="activity-date">{{ item.date | date }}</span>
+        </div>
+        </li>
+    </ul>
+    
+  </section>
+  <!-- Voy a cambiar este div por un section -->
+  <section aria-labelledby="preferences" class="preferences">
+    <h2 id="preferences">Preferencias</h2>
+    <!-- Cambiaré los siguientes 2 divs por article -->
+    <article aria-label="Notificaciones por email" class="preference-item">
+      <span>Notificaciones por email</span>
+      <label for="email-notifications" class="switch">
+        <input id="email-notifications"  aria-labelledby="email-notifications"  type="checkbox"  [attr.aria-checked]="preferences.emailNotifications" [(ngModel)]="preferences.emailNotifications">
+        <div class="slider"></div>
+      </label>
+    </article>
+    <article aria-label="Modo oscuro"  class="preference-item">
+      <span>Modo oscuro</span>
+      <label for="dark-mode"  class="switch">
+        <input id="dark-mode" aria-labelledby="dark-mode" [attr.aria-checked]="preferences.darkMode" type="checkbox" [(ngModel)]="preferences.darkMode">
+        <div class="slider"></div>
+      </label>
+    </article>
+  </section>
+</main>

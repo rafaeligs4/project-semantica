@@ -46,3 +46,7 @@ Optimización (1/1)
 
 ## ACTUALIZACION SOBRE EL TERCER DÍA
 El dia de hoy estuve revisando la teoria para poder entender ARIA y como usarlo
+
+## ACTUALIZACION SOBRE EL CUARTO DIA 
+
+ Estuve realizando otro ejercicio donde utilicé mi conocimiento para mejorar la semantica HTML y usar los atributos ARIA

@@ -1,0 +1,60 @@
+<!-- user-panel.component.html -->
+<div class="user-dashboard">
+  <div class="user-header">
+    <img src="{{ user.avatar }}" class="avatar">
+    <div>
+      <h1>{{ user.name }}</h1>
+      <p>Miembro desde: {{ user.joinDate }}</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-value">{{ stats.posts }}</div>
+      <div class="stat-label">Publicaciones</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ stats.followers }}</div>
+      <div class="stat-label">Seguidores</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">{{ stats.following }}</div>
+      <div class="stat-label">Siguiendo</div>
+    </div>
+  </div>
+
+  <div class="user-actions">
+    <div class="action-btn" (click)="editProfile()">Editar Perfil</div>
+    <div class="action-btn" (click)="changePassword()">Cambiar Contraseña</div>
+    <div class="action-btn" (click)="logout()">Cerrar Sesión</div>
+  </div>
+
+  <div class="recent-activity">
+    <h2>Actividad Reciente</h2>
+    <div class="activity-item" *ngFor="let item of activity">
+      <div class="activity-icon">📝</div>
+      <div class="activity-content">
+        <p>{{ item.description }}</p>
+        <div class="activity-date">{{ item.date | date }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preferences">
+    <h2>Preferencias</h2>
+    <div class="preference-item">
+      <span>Notificaciones por email</span>
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="preferences.emailNotifications">
+        <div class="slider"></div>
+      </label>
+    </div>
+    <div class="preference-item">
+      <span>Modo oscuro</span>
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="preferences.darkMode">
+        <div class="slider"></div>
+      </label>
+    </div>
+  </div>
+</div>
