@@ -50,3 +50,7 @@ El dia de hoy estuve revisando la teoria para poder entender ARIA y como usarlo
 ## ACTUALIZACION SOBRE EL CUARTO DIA 
 
  Estuve realizando otro ejercicio donde utilicé mi conocimiento para mejorar la semantica HTML y usar los atributos ARIA
+
+# ACTUALIZACION SOBRE EL QUINTO DÍA
+ 
+ Comencé a usar la herramienta NVDA para que lea en voz alta la página y probarla correctamente

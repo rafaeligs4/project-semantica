@@ -19,13 +19,13 @@ Crear un componente Angular que muestre una lista de artículos de blog, mejoran
 <!-- El contenedor debe ser un section en vez de un div -->
 <main class="container">
   <!-- El header debe usar una etiqueta header, no un div -->
-  <header class="header">
-    <h1>Últimos Artículos</h1>
+  <header aria-labelledby="Titulo" class="header">
+    <h1 aria-label="Titulo">Últimos Artículos</h1>
     <!-- Respecto al buscador, acá debemos cambiar el div por un label, y le agregaremos los atributos
     correctos 
     -->
     <div role="search" class="search">
-      <label for="searcher" aria-label="buscador" > Buscar artículos</label>
+      <h2  for="searcher" aria-label="buscador" > Buscar artículos</h2>
       <input id="searcher"  type="text">
       <!-- El div debe ser un button -->
       <button role="button"  type="submit"  class="search-button">Buscar</button>
